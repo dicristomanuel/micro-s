@@ -1,0 +1,16 @@
+lerna(info)    Lerna v2.0.0-beta.24
+lerna(info)    Independent Versioning Mode
+lerna(debug)   Attempting running PublishCommand.initialize
+lerna(info)    Checking for updated packages...
+lerna(error)   Errored while running PublishCommand.initialize
+    Error: No updated packages to publish.
+        at PublishCommand.initialize (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:86:18)
+        at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:157:21)
+        at PublishCommand.runCommand (/usr/local/lib/node_modules/lerna/lib/Command.js:141:12)
+        at PublishCommand.run (/usr/local/lib/node_modules/lerna/lib/Command.js:65:12)
+        at Object.<anonymous> (/usr/local/lib/node_modules/lerna/bin/lerna.js:58:11)
+        at Module._compile (module.js:556:32)
+        at Object.Module._extensions..js (module.js:565:10)
+        at Module.load (module.js:473:32)
+        at tryModuleLoad (module.js:432:12)
+        at Function.Module._load (module.js:424:3)
