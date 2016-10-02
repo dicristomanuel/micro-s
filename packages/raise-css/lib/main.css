@@ -1,0 +1,15 @@
+.sidebar {
+  margin: 0 0 0 0;
+}
+body {
+  background: #f00;
+}
+strong {
+  background-color: #808080;
+}
+.main {
+  font-size: 20px;
+}
+.main input {
+  display: none;
+}
