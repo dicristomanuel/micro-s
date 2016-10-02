@@ -1,9 +1,9 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-var stylusLoader = ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader");
+// var cssLoaderFile = ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src',
+  // entry: './src/index.js',
   module: {
     loaders: [
       {
@@ -13,16 +13,19 @@ module.exports = {
       },
       {
         test: /\.css/,
-        loaders: ['style', 'css'],
+        loader: ExtractTextPlugin.extract("css"),
         include: __dirname + '/src'
-      },
-      {
-        test: /\.styl$/,
-        loader: stylusLoader
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("[name].css")
+    new ExtractTextPlugin('style.css')
   ]
 };
+
+
+// var stylusLoader = ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader');
+// {
+//   test: /\.styl$/,
+//   loader: stylusLoader
+// }
