@@ -1,6 +1,3 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var styleLoader = ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]');
-
 module.exports = {
   entry:  './src',
   output: {
@@ -15,12 +12,10 @@ module.exports = {
         include: __dirname + '/src',
       },
       {
-        test: /\.css/,
-        loader: styleLoader,
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader?modules&localIdentName=[local]--[hash:base64:5]!stylus-loader',
+        include: __dirname + '/src'
       }
     ],
-  },
-  plugins: [
-    new ExtractTextPlugin("styles.css")
-  ]
+  }
 };
